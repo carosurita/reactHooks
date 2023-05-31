@@ -35,7 +35,7 @@ const ComponenteFuncion = ()={
 */
 
 
-const DatosUsuario = () => {
+const DatosUsuario = ({ updateStep }) => {
   const [email, setEmail] = useState({
     value: "",
     valid: null,
@@ -57,6 +57,7 @@ const DatosUsuario = () => {
         if (email.valid && password.valid) {
           console.log("Siguiente formulario");
           console.log(email, password);
+          updateStep(1);
         } else {
           console.log("No hacer nada");
         }
